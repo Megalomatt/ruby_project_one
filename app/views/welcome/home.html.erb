@@ -2,20 +2,13 @@
 <html>
 <head>
 <link rel="stylesheet" href="styles.css">
-<ul class= "top_banner_back">
-  <li class= "top_banner_list"><%= link_to 'Home', root_path, {:style=>'color:white; text-decoration: none;'} %></li>
-  <li class= "top_banner_list"><%= link_to 'About', about_path, {:style=>'color:white; text-decoration: none;'} %></li>
 
-</ul><title>
+<title>
 Ruby on Rails first project
 </title>
 </head>
 
 <body>
-<h1>
-<%= image_tag("ruby_64x52.png" , alt: "Ruby Logo", id: "logo") %>
-Alpha Blog</h1>
-
 <div class="container">
 <%= image_tag("banner_1280x100.jpg" , alt: "Coding banner", id: "topbanner") %>
 <div class="top-left">Home</div>
@@ -37,19 +30,6 @@ Alpha Blog</h1>
 
 </div>
 
-<div class="footer">
-<p id="demo"></p>
-
-<script>
-var today = new Date();
-var year = today.getFullYear()
-document.getElementById("demo").innerHTML ="© " + year + " Matt C";
-
-</script>
-
-
-
-</div>
 
 </body>
 </html>

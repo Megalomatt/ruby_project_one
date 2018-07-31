@@ -8,9 +8,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('ruby_icon.ico'), :rel => 'icon', :type => "image/x-icon" %>
+    
+    <ul class= "top_banner_back">
+  <li class= "top_banner_list"><%= link_to 'Home', root_path, {:style=>'color:white; text-decoration: none;'} %></li>
+  <li class= "top_banner_list"><%= link_to 'About', about_path, {:style=>'color:white; text-decoration: none;'} %></li>
+  <li class= "top_banner_list"><%= link_to 'Articles', articles_path, {:style=>'color:white; text-decoration: none;'} %></li>
+  <li class= "top_banner_list"><%= link_to 'New Article', new_article_path, {:style=>'color:white; text-decoration: none;'} %></li>
+</ul>
+    
+    
   </head>
 
   <body>
+    <h1><%= image_tag("ruby_64x52.png" , alt: "Ruby Logo", id: "logo") %>Alpha Blog</h1>
     
     <% flash.each do |name,msg| %>
     <ul>
@@ -21,5 +31,15 @@
     <% end %>
     
     <%= yield %>
+    
+    <div class="footer">
+<p id="demo"></p>
+
+<script>
+var today = new Date();
+var year = today.getFullYear()
+document.getElementById("demo").innerHTML ="© " + year + " Matt C";
+
+</script>
   </body>
 </html>
