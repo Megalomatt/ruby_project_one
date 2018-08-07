@@ -65,7 +65,5 @@ class ArticlesController < ApplicationController
   
   end
   
-  def empty_method
-  end
   
 end
