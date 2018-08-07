@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
      redirect_to article_path(@article)
    else
       render 'new'
+      
    end
   end
   
@@ -62,6 +63,9 @@ class ArticlesController < ApplicationController
       redirect_to root_path
     end
   
+  end
+  
+  def empty_method
   end
   
 end
