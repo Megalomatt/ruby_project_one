@@ -1,16 +1,16 @@
 <h1 align="center"></h1>
 <div align="center">
   <%= will_paginate %>
-      <% @categories.each do |category| %>
-        <ul class="list-unstyled">
-          <div class="row">
-            <div class="well col-md-3 col-md-offet-4">
+    <% @categories.each do |category| %>
+      <ul class="listing">
+        <div class="row">
+          <div class="well col-lg-4 col-lg-offset-4">
               <li class="article-title">
                 <%= link_to "#{category.name}", category_path(category) %>
               </li>
             </div>
           </div>
         </ul>
-      <% end %>
-    <%= will_paginate %>
-  </div>
+     <% end %>
+  <%= will_paginate %>
+</div>
